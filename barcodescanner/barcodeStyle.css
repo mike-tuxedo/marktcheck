@@ -1,0 +1,47 @@
+	body
+	{
+		color: #111111;
+		font-family: arial;
+		font-weight: bold;
+	}
+	video
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	canvas
+	{
+		position: absolute;
+		display: none;
+		left: 0;
+		top: 0;
+	}
+	#description
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80%;
+		height: 80%;
+		background-color: rgba(255,255,255,1);
+		padding: 10%;
+		text-align: center;
+	}
+	img
+	{
+		position: absolute;
+		width: 200px;
+		height: 400px;
+		left: 50%;
+		margin-left: -100px;
+	}
+	button
+	{
+		position:relative;
+		top: 400px;
+		width: 200px;
+		height: 50px;
+		background: #bbde12;
+	}

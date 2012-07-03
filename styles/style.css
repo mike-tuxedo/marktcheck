@@ -1,0 +1,145 @@
+body
+{
+    color: #000;
+    font-size: 12px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+#navigationHeader ul, #settings ul 
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigationHeader li, #settings li 
+{
+    list-style: none;
+}
+
+#navigationHeader li
+{
+    display: inline;
+}
+
+#navigationHeader a
+{
+    text-decoration: underline;
+}
+
+.showSettings
+{
+    text-decoration: underline;
+    color: #000;
+    cursor: pointer;
+}
+
+.showSettings:hover
+{
+    color: #ff0000;
+}
+
+#settings
+{
+    position: relative;
+    width: 301px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    background-color: #fff;
+    z-index: 5;
+}
+
+#settings a 
+{
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+#settings a:hover 
+{
+    color: #DDD;
+}
+
+
+#contentArea 
+{
+    width: 303px;
+    min-height: 400px;
+    z-index: 0;
+}
+
+#contentArea  ul 
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#contentArea li 
+{
+    list-style: none;
+}
+
+.typeList
+{
+    display: inline;
+}
+
+/*
+autocomplete styles
+*/
+
+#autocompleteBox 
+{
+    position: absolute;
+    left: 30px;
+    margin: 10px 0px 0px 0px;
+    width: 250px;
+    background-color: #212427;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border: 2px solid #000; 
+    color: #fff;
+    z-index: 1000;
+}
+
+#autocompleteList 
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#autocompleteList li 
+{
+    margin: 0px 0px 3px 0px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+#autocompleteList li:hover 
+{
+    background-color: #659CD8;
+}
+
+#autocompleteList a {
+    color: #FFF;
+}
+
+#missingFieldMsg
+{
+    text-align: center;
+    color: red;
+}
+
+#productCount 
+{
+    color: #9a9a9a;
+}

@@ -1,0 +1,28 @@
+.resultCategorie
+{
+    position: relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 50px;
+    width: 100%;
+}
+
+.categorie
+{
+    position: absolute;
+    width: 100px;
+    top: 17px;
+}
+
+.cntCircle
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    
+    text-align: center;
+    right: 10px;
+    top: 17px;
+}

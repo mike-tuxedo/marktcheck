@@ -1,0 +1,97 @@
+#productDetail {
+	float: left;
+	width: 300px;
+}
+
+#productDetailNavigation span, #productDetailHeader span 
+{
+	float: left;
+	margin: 0 0 -1px 0;
+	background-color: #fff;
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+
+#productDetailHeader span {
+	width: 258px;
+	padding: 20px;
+}
+
+#productDetailNavigation p 
+{
+	width: 258px;
+}
+
+#productDetailNavigation a 
+{
+	float: left;
+	width: 290px;
+	height: 30px;
+	margin-bottom: -1px;
+	padding: 15px 0 0 10px;
+	background-image: url(../images/productDetailNavigationBackgroundOpen.png), url(../images/productDetailNavigationBackground.png);
+	background-repeat: none;
+}
+
+#productDetailNavigation a:hover 
+{
+	color: #000;
+}
+
+.valuationCategory, .productTitle 
+{
+	padding: 10px 30px 10px 10px;
+	background-color: #323232;
+	color: #fff;
+}
+
+.productTitle
+{
+	margin-bottom: -5px;
+}
+
+.valuationDescription
+{
+	padding: 0 20px;
+}
+
+.valuationGreenBang, .valuationGreen, .valuationOrange, .valuationRed, .valuationRedBang, .valuationNotFound
+{
+	padding: 0 20px;
+}  
+
+.valuationNotFound
+{
+	font-style: italic;
+}
+
+.valuationGreenBang 
+{
+	color: #139a14;
+}
+
+.valuationGreen 
+{
+	color: #53d962;
+}
+
+.valuationOrange 
+{
+	color: #f5ac0f;
+}
+
+.valuationRed 
+{
+	color: #f35858;
+}
+
+.valuationRedBang 
+{
+	color: #af0404;
+}
+
+.toCenter
+{
+	padding: 20px;
+}
