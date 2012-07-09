@@ -14,26 +14,7 @@ a:hover {
     color: #ff0000;
 }
 
-#navigationHeader ul, #settings ul 
-{
-    margin: 0px;
-    padding: 0px;
-}
 
-#navigationHeader li, #settings li 
-{
-    list-style: none;
-}
-
-#navigationHeader li
-{
-    display: inline;
-}
-
-#navigationHeader a
-{
-    text-decoration: underline;
-}
 
 .showSettings
 {
@@ -70,23 +51,7 @@ a:hover {
 }
 
 
-#contentArea 
-{
-    width: 303px;
-    min-height: 400px;
-    z-index: 0;
-}
 
-#contentArea  ul 
-{
-    margin: 0px;
-    padding: 0px;
-}
-
-#contentArea li 
-{
-    list-style: none;
-}
 
 .typeList
 {
@@ -139,7 +104,42 @@ autocomplete styles
     color: red;
 }
 
-#productCount 
-{
-    color: #9a9a9a;
+  body, input:focus, a:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+	
+  /* Login and SignUp specials*/
+
+  #nickname, #email, #password
+  {
+      margin-bottom: 20px;
+      margin-top: 10px;   
+  }
+
+  #loginButton, #signupButton, #barcodeScanner, #loginButton
+  {
+    height: 32px;
+    background: #bade11;
+    border: solid 1px #acacac;
+    width: 270px;
+    text-align: center;
+  }
+
+  /* detail for the detailsite */
+  #addProduct{
+    position: absolute;
+    width: 20px;
+    left: 73%;
+    top: 120px;
+  }
+
+  .ratingContainer{
+    width: 150px;
+    float: left;
+  }
+
+  .ratings{
+    margin-right: 0;
+  }
 }

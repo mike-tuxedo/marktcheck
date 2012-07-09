@@ -15,7 +15,20 @@ $stmt -> bind_result($articleType);
 $stmt -> fetch();
 $stmt -> close();
 
-$title = '<h1>'.utf8_encode($articleType).'</h1>';
+// choose the right icon for the header in the category list
+switch($type){
+	case 1:
+		$icon = 'food_green';
+		break;
+	case 2:
+		$icon = 'drinks_green';
+		break;
+	case 3:
+		$icon = 'cosmetics_green';
+		break;
+}
+
+$title = '<h1><div id="'. $icon .'"></div>'.utf8_encode($articleType).'</h1>';
 
 // show all categories in this articletype
 $sql = "SELECT DISTINCT
@@ -54,9 +67,9 @@ while($stmt -> fetch())
 
     if($numberOfArticles > 0)
         $content .= '
-            <li id="categoryListNavigation">
-                <a href="productList.php?cid='.$categoryID.'" title="'.utf8_encode($categoryName).'">'.utf8_encode($categoryName).' <span id="productCount"> ('.$numberOfArticles.')</span></a>
-            </li>';
+            <a href="productList.php?cid='.$categoryID.'" title="'.utf8_encode($categoryName).'"> 
+            	<li id="categoryListNavigation">'.utf8_encode($categoryName).'<div id="arrowRight"></div><span id="productCount"> ('.$numberOfArticles.')</span></li>
+            </a>';
 }
 
 $content .= '</ul>';

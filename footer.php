@@ -2,13 +2,13 @@
 
 // show not working back-button at homescreen
 if(preg_match('/.php/i', $_SERVER['REQUEST_URI']))
-    $navigationHeader = '<ul><li id="back"><a id="link_back" href="javascript:history.back()"><img src="images/back.png" alt="back" /></a></li>';
+    $navigationHeader = '<ul><li id="back"><a id="link_back" href="javascript:history.back()"><div id="back_active"></div></a></li>';
 else
-    $navigationHeader = '<ul><li id="back"><img src="images/back_inactive.png" alt="back" /></li>';
+    $navigationHeader = '<ul><li><div id="back_inactive"></div></li>';
 
 $navigationHeader .= '
-                <li><a href="./"><img id="logo" src="images/logo.png" /></a></li>
-                <li class="showSettings"><img src="images/settings.png" /></li>
+                <li><a href="./"><img id="logo"/></a></li>
+                <li class="showSettings"><div id="settingsButton"></div></li>
                 </ul>';
 
 ##############

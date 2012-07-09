@@ -1,0 +1,386 @@
+@media only screen and (min-width: 320px){
+    
+	/*
+ 		Different font faces to embedd in the application (please refer to path/location)
+ 	*/
+    
+  @font-face {
+    font-family: 'QuorumStdBlack';
+    src: url('../fonts/QuorumStd-Black.otf');
+  }
+  
+  @font-face {
+    font-family: 'QuorumStdMedium';
+    src: url('../fonts/QuorumStd-Medium.otf');
+  }
+  
+  @font-face {
+    font-family: 'QuorumStdLight';
+    src: url('../fonts/QuorumStd-Light.otf');
+  }
+  
+  @font-face {
+    font-family: 'QuorumStdBold';
+    src: url('../fonts/QuorumStd-Bold.otf');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'QuorumStdBook';
+    src: url('../fonts/QuorumStd-Book.otf');
+  }
+
+	/*
+		General style settings
+	*/
+	
+	body{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		font: 14.5px QuorumStdMedium;
+		background-image: url('../images/reticular_background.png');
+		color: #8F9499;
+	}
+	
+	ul{
+	  margin: 0px;
+	  padding: 0px;
+	}
+	
+	li{
+	  list-style: none;
+	  display: inline;
+	}
+
+	a{
+	  text-decoration: none;
+	  color: #8F9499;
+	}
+	
+	/*
+		Header
+	*/
+	
+	#navigationHeader{
+	  background: #bade11;
+	  width: 100%;
+	  height: 51px;
+	}
+	
+	/*
+		Back button
+	*/
+	
+	#back_inactive{
+		background: url('../images/csssprite.png') 0 -34px no-repeat;
+	  width: 21px;
+	  height: 51px;
+	  position: absolute;
+	  left: 10px;
+	}
+	
+	#back_active{
+		background: url('../images/csssprite.png') -22px -34px no-repeat;
+		width: 21px;
+		height: 51px;
+		position: absolute;
+		left: 10px;
+	}
+	
+	/*
+		Logo
+	*/
+	
+	#logo{
+		background: url('../images/csssprite.png') -172px -4px no-repeat;
+		height: 30px;
+	  width: 163px;
+	  position: absolute;
+	  margin-left: 50%;
+	  left: -81px;
+	  top: 10px;
+	}
+	
+	/*
+		Settings button
+	*/
+	
+	#settingsButton{
+		background: url('../images/csssprite.png') -98px -34px no-repeat;
+		height: 51px;
+		width: 53px;
+		float: right;
+	}
+	
+	/*
+		Site and content
+	*/
+	
+	#site{
+		padding: 10px;
+	}
+	
+	#contentArea #note{
+	  font-family: 'QuorumStdBook';
+	  font-size: 14px;
+	  color: #777;
+	  text-align: center;
+	  margin-top: 20px;
+	}
+	
+	#contentArea #welcome{
+		background: url('../images/csssprite.png') 0 -89px no-repeat;
+	  height: 66px;
+	  width: 228px;
+	  margin-left: 50%;
+	  position: absolute;
+	  left: -114px;
+	  top: 80px;
+	}
+	
+	/*
+		Search field
+	*/
+	
+	form input{ 
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0;
+	  
+	  margin-top: 100px;
+	}
+	
+	form #searchField, #nickname, #email, #password{
+	  height: 28px;
+	  width: 248px;
+	  font-size: 14px;
+	  padding: 5px;
+	  border: 1px solid #ccc;
+	  float: left;
+	}
+	
+	form #submit{
+	  width: 40px;
+	  height: 40px;
+	  background: url('../images/csssprite.png') -152px -45px no-repeat;
+	  border: none;
+	}
+	
+	/*
+		Buttons on start screen
+	*/
+	
+	#contentArea .typeList{
+	  display: block;
+	  float: left;
+	  margin: 0 4px 6px 4px;
+	  
+	  /* gradient */
+	 
+	  /* dark-grey:      RGB (231, 231, 231, 1)
+	   *                 HEX #e7e7e7
+	   * bright-grey:    RGB (244, 244, 244, 1)
+	   *                 HEX #f4f4f4
+	   * 
+	   */
+	    
+	  background: rgb(231,231,231,1);
+	  background: -moz-linear-gradient(top,  rgba(231,231,231,1) 0%, rgba(244, 244, 244, 1) 100%);
+	  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(231,231,231,1)), color-stop(100%,rgba(244, 244, 244, 1)));
+	  background: -webkit-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+	  background: -o-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+	  background: -ms-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+	  background: linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#f4f4f4',GradientType=0 );
+
+	  /* border radius */
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;
+	 
+	  /* shadow */
+	  -webkit-box-shadow: -2px -2px 4px rgba(0,0,0,0.1);
+	  -moz-box-shadow: -2px -2px 4px rgba(0,0,0,0.1);
+	  box-shadow: -2px -2px 4px rgba(0,0,0,0.1);
+	
+		/* border */
+		border: solid 1px #acacac;
+	}
+		
+	#contentArea .buttonSmall{
+	  width: 90px;
+	  height: 90px;
+	}
+	
+	#contentArea .buttonLarge{
+	  width: 290px;
+	  height: 70px;
+	}
+	
+	#food{
+		background: url('../images/csssprite.png') -248px -53px no-repeat;
+		width: 43px;
+		height: 32px;
+		position: relative;
+		left: -21px;
+		top: 20px;
+		margin-left: 50%;
+	}
+	
+	#food_text{
+		position: relative;
+		top: 31px;
+		text-align: center;
+	}
+	
+	#drinks{
+		background: url('../images/csssprite.png') -292px -48px no-repeat;
+		width: 25px;
+		height: 37px;
+		position: relative;
+		left: -13px;
+		top: 15px;
+		margin-left: 50%;
+	}
+	
+	#drinks_text{
+		position: relative;
+		top: 25px;
+		text-align: center;
+	}
+	
+	#cosmetics{
+		background: url('../images/csssprite.png') -318px -60px no-repeat;
+		width: 27px;
+		height: 25px;
+		position: relative;
+		left: -13px;
+		top: 27px;
+		margin-left: 50%;
+	}
+	
+	#cosmetics_text{
+		position: relative;
+		top: 36px;
+		text-align: center;
+	}
+	
+	#barcode{
+		background: url('../images/csssprite.png') -199px -51px no-repeat;
+		width: 48px;
+		height: 34px;
+		position: relative;
+		top: 18px;
+		left: 20px;
+		float: left;
+	}
+	
+	#barcode_text{
+		position: relative;
+		top: 30px;
+		left: 50px;
+		width: 200px;
+	}
+	
+	#shoppingcard{
+		background: url('../images/csssprite.png') -347px -50px no-repeat;
+		width: 45px;
+		height: 35px;
+		position: relative;
+		top: 18px;
+		left: 20px;
+		float: left;
+	}
+	
+	#shoppingcard_text{
+		position: relative;
+		top: 30px;
+		left: 50px;
+		width: 200px;
+	}
+	
+	/*
+		Category list
+	*/
+	
+	h1{
+		height: 30px;
+		width: 280px;
+		background: #2f2f2f;
+		color: #fff;
+		margin: 0;
+		padding: 17px 0 0 20px;
+		font-size: 14.5px;
+		font-weight: normal;
+	}
+	
+	#food_green{
+		background: url('../images/csssprite.png') -393px -66px no-repeat;
+		width: 25px;
+		height: 18px;
+		float: left;
+		
+		position: relative;
+		left: -10px;
+		top: -3px;
+	}
+	
+	#drinks_green{
+		background: url('../images/csssprite.png') -393px -66px no-repeat;
+		width: 25px;
+		height: 18px;
+		float: left;
+		
+		position: relative;
+		left: -10px;
+		top: -3px;
+	}
+	
+	#cosmetics_green{
+		background: url('../images/csssprite.png') -393px -66px no-repeat;
+		width: 25px;
+		height: 18px;
+		float: left;
+		
+		position: relative;
+		left: -10px;
+		top: -3px;
+	}
+	
+	#productListNavigation,
+	#categoryListNavigation, 
+	.searchResultListNavigation, 
+	.searchResultListNavigationLast
+	{
+		width: 290px;
+		height: 30px;
+		padding: 15px 0 0 10px;
+		color: #2f2f2f;
+		
+		background: rgb(231,231,231,1);
+		background: -moz-linear-gradient(top,  rgba(231,231,231,1) 0%, rgba(244, 244, 244, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(231,231,231,1)), color-stop(100%,rgba(244, 244, 244, 1)));
+		background: -webkit-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+		background: -o-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+		background: -ms-linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+		background: linear-gradient(top,  rgba(231,231,231,1) 0%,rgba(244, 244, 244, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#f4f4f4',GradientType=0 );
+		
+		display: block;
+	}
+	
+	#productCount{
+		float: right;
+		margin-right: 20px;
+		color: #8F9499;
+	}
+	
+	#arrowRight{
+		background: url('../images/csssprite.png') -395px -89px no-repeat;
+		width: 9px;
+		height: 15px;
+		float: right;
+		margin-right: 20px;
+	}
+}
