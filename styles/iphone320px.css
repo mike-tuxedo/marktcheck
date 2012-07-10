@@ -311,8 +311,8 @@
 		color: #fff;
 		margin: 0;
 		padding: 17px 0 0 20px;
-		font-size: 14.5px;
 		font-weight: normal;
+		font: 13px QuorumStdLight;
 	}
 	
 	#food_green{

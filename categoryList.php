@@ -3,6 +3,7 @@
 include 'header.php';
 include 'configParameter.php';
 include 'checkGETParams.php';
+include 'functions.php';
 
 $type = $_GET['type'];
 
@@ -67,8 +68,8 @@ while($stmt -> fetch())
 
     if($numberOfArticles > 0)
         $content .= '
-            <a href="productList.php?cid='.$categoryID.'" title="'.utf8_encode($categoryName).'"> 
-            	<li id="categoryListNavigation">'.utf8_encode($categoryName).'<div id="arrowRight"></div><span id="productCount"> ('.$numberOfArticles.')</span></li>
+            <a href="productList.php?type='.$type.'&cid='.$categoryID.'" title="'.utf8_encode($categoryName).'"> 
+            	<li id="categoryListNavigation">'.word_trim(utf8_encode($categoryName), 35, 2).'<div id="arrowRight"></div><span id="productCount"> ('.$numberOfArticles.')</span></li>
             </a>';
 }
 

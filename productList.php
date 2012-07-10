@@ -2,10 +2,44 @@
 
 include 'header.php';
 include 'configParameter.php';
+include 'functions.php';
 
-$title = "<h1>Produktliste</h1>";
+/*
+ * SQL query for the breadcumbs in the product list
+ */
 
+$type = $_GET['type'];
 $categoryID = $_GET['cid'];
+
+/* sql statement for headline */ 
+$sql_breadcumb = "
+	SELECT nme FROM category_language	
+	WHERE categoryid = ?
+";
+
+/* execute sql statement */
+$stmt_breadcumb = $connect -> prepare($sql_breadcumb);
+$stmt_breadcumb -> bind_param('i', $categoryID);
+$stmt_breadcumb -> execute();
+$stmt_breadcumb -> bind_result($product_name);
+
+// choose the right icon for the header in the category list
+switch($type){
+	case 1:
+		$icon = 'food_green';
+		break;
+	case 2:
+		$icon = 'drinks_green';
+		break;
+	case 3:
+		$icon = 'cosmetics_green';
+		break;
+}
+
+while($stmt_breadcumb -> fetch()){
+	$title = '<h1><div id="'. $icon .'"></div>Lebensmittel > ' . word_trim(utf8_encode($product_name), 35, 2) . '</h1>';
+}
+
 $searchStr = preg_replace('/ |-|_|\+/', '%', '%'.$_GET['sstr'].'%');
 
 $sql = "SELECT DISTINCT a.id, a.nme FROM article_category ac, article a, articleType at
