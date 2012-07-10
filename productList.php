@@ -37,7 +37,7 @@ switch($type){
 }
 
 while($stmt_breadcumb -> fetch()){
-	$title = '<h1><div id="'. $icon .'"></div>Lebensmittel > ' . word_trim(utf8_encode($product_name), 35, 2) . '</h1>';
+	$title = '<h1><div id="'. $icon .'"></div>Lebensmittel > ' . word_trim(utf8_encode($product_name), 20, 3) . '</h1>';
 }
 
 $searchStr = preg_replace('/ |-|_|\+/', '%', '%'.$_GET['sstr'].'%');
@@ -58,15 +58,21 @@ $content = '<ul>';
 
 while($stmt -> fetch())
 {
-	if(strlen(utf8_encode($articleName)) > 38)
-		$articleNameShown = substr(utf8_encode($articleName), 0, 38).' ...';
+	// alternative with complete words
+	$articleNameShown = word_trim(utf8_encode($articleName), 30, 3);
+	/*if(strlen(utf8_encode($articleName)) > 30)
+		$articleNameShown = substr(utf8_encode($articleName), 0, 30).' ...';
 	else
 		$articleNameShown = utf8_encode($articleName);
-
+	*/
+	
 	$content .= '
-		<li id="productListNavigation">
-			<a href="productDetail.php?aid='.$articleID.'" id="'.utf8_encode($articleName).'" title="'.utf8_encode($articleName).'">'.$articleNameShown.'</a>
-		</li>';
+		<a href="productDetail.php?aid='.$articleID.'" id="'.utf8_encode($articleName).'" title="'.utf8_encode($articleName).'">
+			<li id="productListNavigation">'.$articleNameShown.'
+			<div id="arrowRight"></div>
+			<div class="circle" id="orange"></div>
+			</li>
+		</a>';
 }
 
 $content .= '</ul>';
