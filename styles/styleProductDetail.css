@@ -1,3 +1,35 @@
+#addToCart{
+	background: url('../images/csssprite.png') -230px -104px no-repeat;
+	width: 61px;
+	height: 40px;
+	
+	position: relative;
+	left: 200px;
+	bottom: 20px;
+}
+
+.highlight_green{
+	color: #38aa34;
+}
+
+#price{
+	text-align: right;
+	margin: 0;
+	float: right;
+}
+
+#brand{
+}
+
+.ratingContainer{
+  width: 150px;
+  line-height: 2;
+}
+
+.ratings{
+	float: right;
+}
+
 #productDetail {
 	float: left;
 	width: 300px;
@@ -13,9 +45,10 @@
 	border-bottom: 1px solid #dedede;
 }
 
-#productDetailHeader span {
-	width: 258px;
+#productDetailHeader {
+	width: 260px;
 	padding: 20px;
+	background: #fff;
 }
 
 #productDetailNavigation p 
@@ -44,11 +77,6 @@
 	padding: 10px 30px 10px 10px;
 	background-color: #323232;
 	color: #fff;
-}
-
-.productTitle
-{
-	margin-bottom: -5px;
 }
 
 .valuationDescription
@@ -94,4 +122,74 @@
 .toCenter
 {
 	padding: 20px;
+}
+
+/*
+	Rating Icons
+*/
+
+.ratingIcons{
+	margin-right: 15px;
+}
+
+#animal_green{
+	background: url('../images/csssprite.png') -293px -106px no-repeat;
+	width: 35px;
+	height: 25px;
+}
+
+#animal_orange{
+	background: url('../images/csssprite.png') -328px -106px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#animal_red{
+	background: url('../images/csssprite.png') -363px -106px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#eco_green{
+	background: url('../images/csssprite.png') -293px -131px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#eco_orange{
+	background: url('../images/csssprite.png') -328px -131px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#eco_red{
+	background: url('../images/csssprite.png') -363px -131px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#social_green{
+	background: url('../images/csssprite.png') -293px -156px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#social_orange{
+	background: url('../images/csssprite.png') -328px -156px no-repeat;
+	width: 35px;
+	height: 25px;
+	
+}
+
+#social_red{
+	background: url('../images/csssprite.png') -363px -156px no-repeat;
+	width: 35px;
+	height: 25px;
+	
 }

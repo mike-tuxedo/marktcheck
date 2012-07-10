@@ -41,6 +41,12 @@
 		font: 14.5px QuorumStdMedium;
 		background-image: url('../images/reticular_background.png');
 		color: #8F9499;
+		outline: none;
+	}
+	
+	input:focus, a:focus {
+	  outline: none;
+	  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 	
 	ul{
@@ -58,6 +64,15 @@
 	  color: #8F9499;
 	}
 	
+	a:hover{
+		color: #f00;
+	}
+	
+	a li, .showSettings, #submit 
+	{
+	    cursor: pointer;
+	}
+	
 	/*
 		Header
 	*/
@@ -66,6 +81,32 @@
 	  background: #bade11;
 	  width: 100%;
 	  height: 51px;
+	}
+	
+	/*
+		Settings
+	*/
+	
+	#settings
+	{
+	    position: relative;
+	    width: 301px;
+	    border: 1px solid #ccc;
+	    margin-top: 30px;
+	    background-color: #fff;
+	    z-index: 5;
+	}
+	
+	#settings a 
+	{
+	    color: #000;
+	    text-decoration: none;
+	    margin-bottom: 8px;
+	}
+	
+	#settings a:hover 
+	{
+	    color: #f00;
 	}
 	
 	/*
@@ -166,6 +207,72 @@
 	  background: url('../images/csssprite.png') -152px -45px no-repeat;
 	  border: none;
 	}
+	
+	
+	/*
+		Autocomplete styles
+	*/
+	
+	#autocompleteBox 
+	{
+	    position: absolute;
+	    left: 30px;
+	    margin: 10px 0px 0px 0px;
+	    width: 250px;
+	    background-color: #212427;
+	    -moz-border-radius: 7px;
+	    -webkit-border-radius: 7px;
+	    border: 2px solid #000; 
+	    color: #fff;
+	    z-index: 1000;
+	}
+	
+	#autocompleteList 
+	{
+	    margin: 0px;
+	    padding: 0px;
+	}
+	
+	#autocompleteList li 
+	{
+	    margin: 0px 0px 3px 0px;
+	    padding: 3px;
+	    cursor: pointer;
+	}
+	
+	#autocompleteList li:hover 
+	{
+	    background-color: #659CD8;
+	}
+	
+	#autocompleteList a {
+	    color: #FFF;
+	}
+	
+	#missingFieldMsg
+	{
+	    text-align: center;
+	    color: red;
+	}
+	
+	/* 
+		Login and signup
+	*/
+	
+  #nickname, #email, #password
+  {
+      margin-bottom: 20px;
+      margin-top: 10px;   
+  }
+
+  #loginButton, #signupButton, #barcodeScanner, #loginButton
+  {
+    height: 32px;
+    background: #bade11;
+    border: solid 1px #acacac;
+    width: 270px;
+    text-align: center;
+  }
 	
 	/*
 		Buttons on start screen

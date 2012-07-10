@@ -12,16 +12,16 @@ $type = $_GET['type'];
 $categoryID = $_GET['cid'];
 
 /* sql statement for headline */ 
-$sql_breadcumb = "
+$sql = "
 	SELECT nme FROM category_language	
 	WHERE categoryid = ?
 ";
 
 /* execute sql statement */
-$stmt_breadcumb = $connect -> prepare($sql_breadcumb);
-$stmt_breadcumb -> bind_param('i', $categoryID);
-$stmt_breadcumb -> execute();
-$stmt_breadcumb -> bind_result($product_name);
+$stmt = $connect -> prepare($sql);
+$stmt -> bind_param('i', $categoryID);
+$stmt -> execute();
+$stmt -> bind_result($product_name);
 
 // choose the right icon for the header in the category list
 switch($type){
@@ -36,9 +36,11 @@ switch($type){
 		break;
 }
 
-while($stmt_breadcumb -> fetch()){
+while($stmt -> fetch()){
 	$title = '<h1><div id="'. $icon .'"></div>Lebensmittel > ' . word_trim(utf8_encode($product_name), 20, 3) . '</h1>';
 }
+
+$stmt -> close();
 
 $searchStr = preg_replace('/ |-|_|\+/', '%', '%'.$_GET['sstr'].'%');
 

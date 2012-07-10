@@ -3,6 +3,7 @@
 include 'header.php';
 include 'configParameter.php';
 include 'checkGETParams.php';
+include 'functions.php';
 
 $articleID = $_GET['aid'];
 
@@ -48,39 +49,54 @@ $stmt -> close();
 $content .= '
 <div id="productDetail">
 	
-	<p class="productTitle">'.utf8_encode($articleName).'</p>
+	<h1>'.word_trim(utf8_encode($articleName), 40, 4).'</h1>
 	
 	<div id="productDetailHeader">
-		<span>
-			<a id="addProduct" href="addRemoveProduct.php?product='.$articleName.'&action=add" id="addToBasket"><img src="images/addProduct.png" alt="zur Einkaufliste"/></a>';
+		<div class="highlight_green">Wertung:</div>
+			<a href="addRemoveProduct.php?product='.$articleName.'&action=add"><div id="addToCart"></div></a>';
 			
-			if(!empty($brand))
-				$content .= '<p>Marke: '.utf8_encode($brand).'</p>';
-				
+			// price of the product
 			if(!empty($articlePrice))
-				$content .= '<p>'.$articlePrice.' EUR</p>';	
+				$content .= '<p id="price">ab '.$articlePrice.' EUR</p>';	
 			
-			$content .= '<p>';
+			$ratingID = array('animal', 'eco', 'social');
+			$i = 0;
 			
 			// calculate valuation of each class
 			foreach($valuationID as $key => $value)
 			{
-				$content .= '
-					<p></p>
-					<div class="ratingContainer">'.$valuationNameCategory[$key].'</div>
-					<div class="ratings">';
-				
-				for($i = 0; $i < 3; $i++)
-					if($value < 0)
-						$content .= '<img src="images/valuationRatingCircles/noRating.png" />';
-					else 
-						$content .= '<img src="images/valuationRatingCircles/'.$value.'.png" />';	
-				
-				$content .= '</div>';
+				if($value > 0){
+					$content .= '
+						<div class="ratingContainer">'.$valuationNameCategory[$key].'
+						<div class="ratings">';
+						
+							// green
+							if(0 < $value && $value <= 1.5){
+								$content .= '<div class="ratingIcons" 
+								id="'. $ratingID[$i] .'_green"></div>';
+							}
+							//orange
+							else if(1.5 < $value && $value <= 2.4){
+								$content .= '<div class="ratingIcons" 
+								id="'. $ratingID[$i] .'_orange"></div>';
+							}
+							//red
+							else if(2.4 < $value){
+								$content .= '<div class="ratingIcons" 
+								id="'. $ratingID[$i] .'_red"></div>';
+							}
+					
+					$content .= '
+						</div>
+					</div>';
+				}
+				$i++;
 			}
+			
+if(!empty($brand))
+	$content .= '<p id="brand">Marke: '.utf8_encode($brand).'</p>';
 
 $content .= '
-		</span>
 	</div>
 </div>
 <div id="productDetailNavigation">
