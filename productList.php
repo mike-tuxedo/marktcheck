@@ -103,8 +103,13 @@ while($stmt -> fetch())
 	}
 	
 	// calculate the mean value
-
-	$mean = ( $animal + $eco + $social ) / $count;
+	
+	if($count >= 0){
+		$mean = ( $animal + $eco + $social ) / $count;
+	}
+	else{
+		$mean = 0;
+	}
 
 	$content .= '
 		<a href="productDetail.php?aid='.$articleID.'" id="'.utf8_encode($articleName).'" title="'.utf8_encode($articleName).'">
