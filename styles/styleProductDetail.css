@@ -19,11 +19,14 @@
 }
 
 #brand{
+	margin: 0;
 }
 
 .ratingContainer{
   width: 150px;
   line-height: 2;
+  position: relative;
+  top: -40px;
 }
 
 .ratings{

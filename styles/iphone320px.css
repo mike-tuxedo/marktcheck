@@ -484,7 +484,7 @@
 		color: #8F9499;
 	}
 	
-	#arrowRight{
+	.arrowRight{
 		background: url('../images/csssprite.png') -395px -89px no-repeat;
 		width: 9px;
 		height: 15px;
@@ -504,10 +504,15 @@
 		margin-right: 20px;
 	}
 	
-	#orange{
+	.green{
+		background: green;
+	}
+	
+	.orange{
 	  background: orange;
-	  background: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
-	  background: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
-	  background: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	}
+	
+	.red {
+		background: red;
 	}
 }

@@ -69,7 +69,7 @@ while($stmt -> fetch())
     if($numberOfArticles > 0)
         $content .= '
             <a href="productList.php?type='.$type.'&cid='.$categoryID.'" title="'.utf8_encode($categoryName).'"> 
-            	<li id="categoryListNavigation">'.word_trim(utf8_encode($categoryName), 40, 3).'<div id="arrowRight"></div><span id="productCount"> ('.$numberOfArticles.')</span></li>
+            	<li id="categoryListNavigation">'.word_trim(utf8_encode($categoryName), 40, 3).'<div class="arrowRight"></div><span id="productCount"> ('.$numberOfArticles.')</span></li>
             </a>';
 }
 

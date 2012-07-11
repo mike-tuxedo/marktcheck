@@ -7,7 +7,7 @@ $valuationNameArray = array("Grün!" => "<p class='valuationGreenBang'>Ausgezeic
 							"Rot" => "<p class='valuationRed'>Genügend</p>",
 							"Rot!" => "<p class='valuationRedBang'>Nicht Genügend</p>");
 
-$valuationNameCategory = array( "animal" => "Tierschutz",
+$valuationNameCategory = array( "animal" => "Tierisch",
 								"eco" => "Ökologisch",
-								"social" => "Sozialer Faktor");
+								"social" => "Sozial");
 ?>
