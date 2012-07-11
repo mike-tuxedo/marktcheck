@@ -104,8 +104,8 @@ while($stmt -> fetch())
 	
 	// calculate the mean value
 	
-	if($count >= 0){
-		$mean = ( $animal + $eco + $social ) / $count;
+	if($count > 0){
+		$mean = $sum / $count;
 	}
 	else{
 		$mean = 0;
